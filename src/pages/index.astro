@@ -12,7 +12,7 @@ const menu = first.at(0);
 
 Astro.response.headers.set(
   "Cache-Control",
-  `max-age=0, s-maxage=${60 * 60} stale-while-revalidate=${60 * 60 * 2}`
+  `max-age=0, s-maxage=${60 * 15} stale-while-revalidate=${60 * 60 * 2}`
 );
 ---
 
