@@ -10,9 +10,22 @@ const data = await getDailyMenu(maybeMock);
 const first = data[0].availability;
 const menu = first.at(0);
 
+function isWeekendInNorway() {
+  const timeZone = "NO";
+  const shortWeekday = new Date().toLocaleDateString("en-GB", {
+    weekday: "short",
+    timeZone,
+  });
+  if (["Sat", "Sun"].includes(shortWeekday)) {
+    return true;
+  }
+  return false;
+}
 Astro.response.headers.set(
   "Cache-Control",
-  `max-age=0, s-maxage=${60 * 15} stale-while-revalidate=${60 * 60 * 2}`
+  `max-age=0, s-maxage=${
+    isWeekendInNorway() ? 60 * 60 : 60 * 15
+  } stale-while-revalidate=${60 * 60 * 2}`
 );
 ---
 
