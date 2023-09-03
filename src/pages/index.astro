@@ -11,7 +11,7 @@ const first = data[0].availability;
 const menu = first.at(0);
 
 function isWeekendInNorway() {
-  const timeZone = "NO";
+  const timeZone = "Europe/Oslo";
   const shortWeekday = new Date().toLocaleDateString("en-GB", {
     weekday: "short",
     timeZone,
