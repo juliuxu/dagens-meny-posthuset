@@ -1,0 +1,273 @@
+{
+  "data": [
+    {
+      "name": "ENTRA V\u00e5r/ Sommer 2023",
+      "availability": [
+        {
+          "period_start": "2023-06-23T00:00:00.000001",
+          "period_end": "2023-06-23T23:59:59.000001",
+          "dishes": [
+            {
+              "id": "Foodie friday 41",
+              "name": "Jordskokksuppe med ovnsbakt piggvar og surdeigskrutonger",
+              "description": null,
+              "period_start": "2023-06-23T00:00:00.000001",
+              "period_end": "2023-06-23T23:59:59.000001",
+              "allergens": [
+                {
+                  "name": "Svoveldioksid",
+                  "code": "AU",
+                  "containment": "CONTAINS"
+                },
+                {
+                  "name": "Melk",
+                  "code": "AM",
+                  "containment": "CONTAINS"
+                }
+              ],
+              "nutrients": [
+                {
+                  "name": "Karbohydrat",
+                  "code": "CHO-",
+                  "unit": "g",
+                  "value": 2.376
+                },
+                {
+                  "name": "Energi (kcal)",
+                  "code": "ENERC_KCAL",
+                  "unit": "kcal",
+                  "value": 86.1
+                },
+                {
+                  "name": "Energi (kJ)",
+                  "code": "ENERC_KJ",
+                  "unit": "kJ",
+                  "value": 355.78
+                },
+                {
+                  "name": "Fett",
+                  "code": "FAT",
+                  "unit": "g",
+                  "value": 8.082
+                },
+                {
+                  "name": "Salt",
+                  "code": "NACL",
+                  "unit": "g",
+                  "value": 0.048
+                },
+                {
+                  "name": "Protein",
+                  "code": "PROCNT",
+                  "unit": "g",
+                  "value": 0.866
+                }
+              ],
+              "category": {
+                "name": "Urban Bowl"
+              },
+              "image": null
+            },
+            {
+              "id": "55 Foodie Friday",
+              "name": "Pannestekt torsk m/crudit\u00e8, blomk\u00e5l chips, potet pure og soyasm\u00f8r",
+              "description": null,
+              "period_start": "2023-06-23T00:00:00.000001",
+              "period_end": "2023-06-23T23:59:59.000001",
+              "allergens": [
+                {
+                  "name": "Melk",
+                  "code": "AM",
+                  "containment": "CONTAINS"
+                },
+                {
+                  "name": "Fisk",
+                  "code": "AF",
+                  "containment": "CONTAINS"
+                },
+                {
+                  "name": "Soya",
+                  "code": "AY",
+                  "containment": "CONTAINS"
+                }
+              ],
+              "nutrients": [
+                {
+                  "name": "Karbohydrat",
+                  "code": "CHO-",
+                  "unit": "g",
+                  "value": 6.762
+                },
+                {
+                  "name": "Energi (kcal)",
+                  "code": "ENERC_KCAL",
+                  "unit": "kcal",
+                  "value": 162.4352
+                },
+                {
+                  "name": "Energi (kJ)",
+                  "code": "ENERC_KJ",
+                  "unit": "kJ",
+                  "value": 675.3058
+                },
+                {
+                  "name": "Fett",
+                  "code": "FAT",
+                  "unit": "g",
+                  "value": 12.1038
+                },
+                {
+                  "name": "Jern",
+                  "code": "FE",
+                  "unit": "mg",
+                  "value": 0
+                },
+                {
+                  "name": "Kostfiber",
+                  "code": "FIBTG",
+                  "unit": "g",
+                  "value": 0
+                },
+                {
+                  "name": "Kalium",
+                  "code": "K",
+                  "unit": "mg",
+                  "value": 0
+                },
+                {
+                  "name": "Natrium",
+                  "code": "NA",
+                  "unit": "mg",
+                  "value": 0
+                },
+                {
+                  "name": "Salt",
+                  "code": "NACL",
+                  "unit": "g",
+                  "value": 0.4759
+                },
+                {
+                  "name": "Protein",
+                  "code": "PROCNT",
+                  "unit": "g",
+                  "value": 6.5354
+                }
+              ],
+              "category": {
+                "name": "Urban Classics"
+              },
+              "image": null
+            },
+            {
+              "id": "Foodie Friday 43",
+              "name": "Baba Au Ruhm",
+              "description": "K\u00f8p rom essens i butiikken ",
+              "period_start": "2023-06-23T00:00:00.000001",
+              "period_end": "2023-06-23T23:59:59.000001",
+              "allergens": [
+                {
+                  "name": "Melk",
+                  "code": "AM",
+                  "containment": "CONTAINS"
+                },
+                {
+                  "name": "Egg",
+                  "code": "AE",
+                  "containment": "CONTAINS"
+                },
+                {
+                  "name": "Hvete",
+                  "code": "UW",
+                  "containment": "CONTAINS"
+                },
+                {
+                  "name": "Gluten",
+                  "code": "AW",
+                  "containment": "CONTAINS"
+                }
+              ],
+              "nutrients": [
+                {
+                  "name": "Karbohydrat",
+                  "code": "CHO-",
+                  "unit": "g",
+                  "value": 13.9856
+                },
+                {
+                  "name": "Energi (kcal)",
+                  "code": "ENERC_KCAL",
+                  "unit": "kcal",
+                  "value": 226.7141
+                },
+                {
+                  "name": "Energi (kJ)",
+                  "code": "ENERC_KJ",
+                  "unit": "kJ",
+                  "value": 942.9312
+                },
+                {
+                  "name": "Fett",
+                  "code": "FAT",
+                  "unit": "g",
+                  "value": 16.1413
+                },
+                {
+                  "name": "Jern",
+                  "code": "FE",
+                  "unit": "mg",
+                  "value": 0
+                },
+                {
+                  "name": "Kostfiber",
+                  "code": "FIBTG",
+                  "unit": "g",
+                  "value": 0.3874
+                },
+                {
+                  "name": "Kalium",
+                  "code": "K",
+                  "unit": "mg",
+                  "value": 0
+                },
+                {
+                  "name": "Natrium",
+                  "code": "NA",
+                  "unit": "mg",
+                  "value": 0
+                },
+                {
+                  "name": "Salt",
+                  "code": "NACL",
+                  "unit": "g",
+                  "value": 1.145
+                },
+                {
+                  "name": "Protein",
+                  "code": "PROCNT",
+                  "unit": "g",
+                  "value": 6.1292
+                }
+              ],
+              "category": {
+                "name": "Urban Hotplate"
+              },
+              "image": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "status": {
+      "id": "d8d85a66-3de0-4f1a-8353-cc1a2cf1a3c1",
+      "type": "Menu",
+      "code": 200,
+      "message": "200 OK",
+      "success": {
+        "title": null,
+        "detail": null
+      }
+    }
+  }
+}

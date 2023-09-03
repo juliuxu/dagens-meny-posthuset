@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "name": "Entra Høst 2023",
+      "availability": []
+    }
+  ],
+  "meta": {
+    "status": {
+      "id": "75b3d1ee-8ef9-40a9-8f38-64bd7f7b9fd9",
+      "type": "Menu",
+      "code": 200,
+      "message": "200 OK",
+      "success": {
+        "title": null,
+        "detail": null
+      }
+    }
+  }
+}
