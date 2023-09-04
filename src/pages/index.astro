@@ -1,4 +1,8 @@
 ---
+import {
+  getCleverCacheControlHeader,
+  isWeekendInNorway,
+} from "../clever-cache-control-header";
 import Layout from "../layouts/Layout.astro";
 import { getDailyMenu, parseMockKey } from "../office-app";
 
@@ -10,22 +14,9 @@ const data = await getDailyMenu(maybeMock);
 const first = data[0].availability;
 const menu = first.at(0);
 
-function isWeekendInNorway() {
-  const timeZone = "Europe/Oslo";
-  const shortWeekday = new Date().toLocaleDateString("en-GB", {
-    weekday: "short",
-    timeZone,
-  });
-  if (["Sat", "Sun"].includes(shortWeekday)) {
-    return true;
-  }
-  return false;
-}
 Astro.response.headers.set(
   "Cache-Control",
-  `max-age=0, s-maxage=${
-    isWeekendInNorway() ? 60 * 60 : 60 * 15
-  } stale-while-revalidate=${60 * 60 * 2}`
+  getCleverCacheControlHeader(Boolean(menu))
 );
 ---
 
@@ -38,7 +29,11 @@ Astro.response.headers.set(
 
     {
       !menu ? (
-        "Ingen meny i dag"
+        isWeekendInNorway() ? (
+          "Ingen meny i dag"
+        ) : (
+          "Menyen er ikke klar enda"
+        )
       ) : (
         <>
           <time datetime={menu.period_start}>
