@@ -12,11 +12,18 @@ const isDebug =
 
 const data = await getDailyMenu(maybeMock);
 const first = data[0].availability;
-const menu = first.at(0);
+
+const todaysMenu = first.find((menu) => {
+  const today = new Date();
+  const start = new Date(menu.period_start);
+  const end = new Date(menu.period_end);
+
+  return start <= today && today <= end;
+});
 
 Astro.response.headers.set(
   "Cache-Control",
-  getCleverCacheControlHeader(Boolean(menu))
+  getCleverCacheControlHeader(Boolean(todaysMenu))
 );
 ---
 
@@ -28,7 +35,7 @@ Astro.response.headers.set(
     <h1>Dagens meny <span class="text-gradient">Posthuset</span></h1>
 
     {
-      !menu ? (
+      !todaysMenu ? (
         isWeekendInNorway() ? (
           "Ingen meny i dag"
         ) : (
@@ -36,13 +43,13 @@ Astro.response.headers.set(
         )
       ) : (
         <>
-          <time datetime={menu.period_start}>
-            {new Date(menu!.period_start).toLocaleString("no-NB", {
+          <time datetime={todaysMenu.period_start}>
+            {new Date(todaysMenu!.period_start).toLocaleString("no-NB", {
               dateStyle: "full",
             })}
           </time>
           <ul id="dishes">
-            {menu.dishes.map((dish) => (
+            {todaysMenu.dishes.map((dish) => (
               <li>
                 <article>
                   <h2>{dish.category.name}</h2>
@@ -73,8 +80,11 @@ Astro.response.headers.set(
         <>
           <hr />
           <details>
-            <summary>Debug</summary>
-            <pre>{JSON.stringify(menu, null, 2)}</pre>
+            <summary>Debug menu</summary>
+            <pre>{JSON.stringify(todaysMenu, null, 2)}</pre>
+          </details>
+          <details>
+            <summary>Debug everything</summary>
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </details>
         </>
