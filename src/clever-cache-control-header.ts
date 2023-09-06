@@ -19,9 +19,9 @@ export function getCleverCacheControlHeader(isMenuInResponse: boolean) {
 
   // If it's a weekday but the menu is not yet ready, we want to be a bit more aggressive
   if (!isMenuInResponse) {
-    return `public, max-age=0, s-maxage=${60 * 10}, stale-while-revalidate=${60 * 60}`;
+    return `public, max-age=0, s-maxage=${60 * 5}, stale-while-revalidate=${60 * 60}`;
   }
 
   // The menu is ready, we can be a bit more relaxed, probably won't change often
-  return `public, max-age=0, s-maxage=${60 * 60}, stale-while-revalidate=${60 * 60 * 2}`;
+  return `public, max-age=0, s-maxage=${60 * 15}, stale-while-revalidate=${60 * 60 * 2}`;
 }
